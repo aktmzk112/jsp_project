@@ -1,0 +1,305 @@
+#### 메인페이지 ################################3	
+	------------------------------------------------------------------------------
+1. index 페이지 뷰 요청
+	요청내용 : /main.mmy
+	파라미터 : 
+	컨트롤러 : /com.yummymap.www.controller.main.Main
+	뷰		 : /main_1.jsp
+	------------------------------------------------------------------------------
+2. 메뉴이름으로 검색시 식당 리스트 비동기 처리
+	요청내용 : /main/searchList.mmy
+	파라미터 : menu
+	컨트롤러 : /com.yummymap.www.controller.main.SearchList
+	뷰		 : /main_1.jsp
+	------------------------------------------------------------------------------
+3. 식당 상세보기 뷰 요청
+	요청내용 : /main/detail.mmy
+	파라미터 : menu
+	컨트롤러 : /com.yummymap.www.controller.main.Detail
+	뷰		 : /main_2.jsp
+	------------------------------------------------------------------------------
+4. 리뷰달기 처리 요청
+	요청내용 : /main/reviewProc.mmy
+	파라미터 : resno, id, txt, starnum
+	컨트롤러 : /com.yummymap.www.controller.main.ReviewProc
+	뷰		 : /main_2.jsp
+	------------------------------------------------------------------------------
+5. 내가작성한 리뷰 삭제 처리 요청
+	요청내용 : /main/removeReview.mmy
+	파라미터 : revno
+	컨트롤러 : /com.yummymap.www.controller.main.RemoveReviewProc
+	뷰		 : /main_2.jsp
+	------------------------------------------------------------------------------
+6. 찜(하트) 처리 요청
+	요청내용 : /main/pickMyRes.mmy
+	파라미터 : resno
+	컨트롤러 : /com.yummymap.www.controller.main.PickMyRes
+	뷰		 : 비동기
+	------------------------------------------------------------------------------
+7. 찜리스트 뷰 요청
+	요청내용 : /main/myList.mmy
+	파라미터 : 
+	컨트롤러 : /com.yummymap.www.controller.main.MyListViewForward
+	뷰		 : /main_2.jsp
+	------------------------------------------------------------------------------	
+8. 식당리스트 데이터 비동기처리
+	요청내용 : /main/resDataProc.mmy
+	파라미터 : 
+	컨트롤러 : /com.yummymap.www.controller.main.ResDataProc
+	뷰		 : 비동기
+	------------------------------------------------------------------------------	
+9. 카테고리 선택시 이벤트 처리
+	요청내용 : /main/selectCateList.mmy
+	파라미터 : 
+	컨트롤러 : /com.yummymap.www.controller.main.SelectCateList
+	뷰		 : 비동기
+	------------------------------------------------------------------------------	
+	
+	
+##### 관리자 ##########################################
+
+1. 관리자 로그인 폼 요청
+	요청내용 : /admin/login.mmy
+	파라미터 :
+	컨트롤러 : /com.yummymap.www.controller.admin.Login
+	뷰		 : /admin/adminLogin.jsp
+	------------------------------------------------------------------------------
+2. 관리자 계정 확인 요청
+	요청내용 : /admin/loginProc.mmy
+	파라미터 : id, pw
+	컨트롤러 : /com.yummymap.www.controller.admin.LoginProc
+	뷰		 : /admin/adminLogin.cls (리다이렉트)
+	------------------------------------------------------------------------------
+3. 관리자 메인뷰 요청
+	요청내용 : /admin/main.mmy
+	파라미터 : 
+	컨트롤러 : /com.yummymap.www.controller.admin.Main
+	뷰		 : /admin/main.jsp 
+	------------------------------------------------------------------------------
+4. 관리자 로그인 처리 요청	
+	요청내용 : /admin/loginProc.mmy
+	파라미터 : id 
+	컨트롤러 : /com.yummymap.www.controller.admin.LoginProc
+	뷰		 : /admin/main.mmy (리다이렉트) 
+	------------------------------------------------------------------------------
+5. 회원 수정 페이지 요청 
+	요청내용 : /admin/remember.mmy
+	파라미터 : 번호
+	컨트롤러 : /com.yummymap.www.controller.admin.RememberView
+	뷰		 : /admin/remember.jsp
+	------------------------------------------------------------------------------
+	
+6. 회원 수정 처리 요청 
+	요청내용 : /admin/rememberProc.mmy
+	파라미터 : name , pw, tel, mail , issue
+	컨트롤러 : /com.yummymap.www.controller.admin.RememberProc
+	뷰		 : /admin/main.mmy (리다이렉트)
+	------------------------------------------------------------------------------
+	
+7. 회원 삭제 처리 요청 
+	요청내용 : /admin/delmemberProc.mmy
+	파라미터 : mno
+	컨트롤러 : /com.yummymap.www.controller.admin.DelmemberProc
+	뷰		 : /admin/main.mmy (리다이렉트)
+	------------------------------------------------------------------------------
+	
+8. 게시판 관리 페이지 요청 
+	요청내용 : /admin/borderList.mmy
+	파라미터 : 무
+	컨트롤러 : /com.yummymap.www.controller.admin.BoardList
+	뷰		 : /admin/main.mmy (리다이렉트)
+	------------------------------------------------------------------------------
+	
+9. 게시판 선택 삭제 및 삭제 요청
+	요청내용 : /admin/checkDel.mmy
+	파라미터 : txtno
+	컨트롤러 : /com.yummymap.www.controller.admin.CheckDel
+	뷰		 : /admin/boardList.mmy (리다이렉트)
+	
+	------------------------------------------------------------------------------
+	
+10. 관리자 정보 변경 뷰 요청
+	요청내용 : /admin/adminedit.mmy
+	파라미터 : id
+	컨트롤러 : /com.yummymap.www.controller.admin.AdminEdit
+	뷰		 : /admin/adminreview.jsp
+	------------------------------------------------------------------------------
+	
+11. 관리자 정보 변경 처리 요청
+	요청내용 : /admin/admineditProc.mmy
+	파라미터 : id, pw, name,tel ,mail
+	컨트롤러 : /com.yummymap.www.controller.admin.AdminEditProc
+	뷰		 : /admin/adminreview.jsp
+	------------------------------------------------------------------------------
+	
+12. 게시글 상세 보기 요청
+	요청내용 : /admin/boardDetail.mmy
+	파라미터 : txtno
+	컨트롤러 : /com.yummymap.www.controller.admin.BoardDetail
+	뷰		 : /admin/boardDetail.jsp
+	------------------------------------------------------------------------------
+	
+13. 로그아웃 처리 요청
+	요청내용 : /admin/logoutProc.mmy
+	파라미터 : sid
+	컨트롤러 : /com.yummymap.www.controller.admin.LogoutProc
+	뷰		 : /admin/login.mmy
+
+	
+########게시판########
+--------------------------------------------------------
+1. 게시판 리스트 뷰
+	요청내용 : /board/boardMain.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.board.boardMain
+	뷰		 : /board/boardMain.jsp
+--------------------------------------------------------
+2. 게시판 글작성 뷰
+	요청내용 : /board/boardWrite.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.board.boardWrite
+	뷰		 : /board/boardWrite.jsp
+--------------------------------------------------------
+3. 게시판 글작성 요청
+	요청내용 : /board/boardWriteProc.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.board.boardWriteProc
+	뷰		 : /board/boardMain.jsp
+--------------------------------------------------------
+4. 게시판 글 상세보기 뷰
+	요청내용 : /board/boardDetail.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.board.boardDetail
+	뷰		 : /board/boardDetail.jsp
+--------------------------------------------------------
+5. 게시판 글쓰기 수정 뷰
+	요청내용 : /board/boardEdit.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.board.boardEdit
+	뷰		 : /board/boardEdit.jsp
+--------------------------------------------------------
+6. 게시판 글쓰기 수정 요청
+	요청내용 : /board/boardEditProc.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.board.boardEditProc
+	뷰		 : /board/boardMain.jsp
+--------------------------------------------------------
+7. 게시판 글쓰기 삭제 요청
+	요청내용 : /board/boardDelete.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.board.boardDelete
+	뷰		 : /board/boardMain.jsp
+--------------------------------------------------------
+8. 추천 컨트롤러 요청
+	요청내용 : /board/recommendProc.mmy
+	파라미터 : r ,txtno
+	컨트롤러 : com.yummymap.www.controller.board.RecommendProc
+	뷰		 : /board/boardDetail.mmy (리다이렉트)	
+--------------------------------------------------------
+9. 리플 작성 요청 컨트롤러
+	요청내용 : /board/replyProc.mmy
+	파라미터 : rtxt , txtno , id(session)
+	컨트롤러 : com.yummymap.www.controller.board.ReplyProc
+	뷰		 : /board/boardDetail.mmy (리다이렉트)
+--------------------------------------------------------
+10. 리플 삭제 요청 컨트롤러
+	요청내용 : /board/replyRemveProc.mmy
+	파라미터 : rno ,txtno
+	컨트롤러 : com.yummymap.www.controller.board.ReplyRemveProc
+	뷰		 : /board/boardDetail.mmy (리다이렉트)
+	
+#########게임##########################################
+1. 게임페이지 뷰 요청 
+	요청내용 : /game/game.mmy
+	파라미터 : 
+	컨트롤러 : yummymap.www.controller.game.Game
+	뷰		 : /game/game.jsp
+--------------------------------------------------------
+2. 메뉴 아이템 비동기 처리 요청 
+	요청내용 : /game/gameItem.mmy
+	파라미터 : 카테고리
+	컨트롤러 : com.yummymap.www.controller.game.GameItem
+	뷰		 : 비동기
+--------------------------------------------------------
+#########게임 끝##########################################
+
+
+#########멤버 ##########################################
+1. 로그인 화면 요청
+	요청내용 : /join/login.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.join.Login
+	뷰		 : /member/Login.jsp
+--------------------------------------------------------
+2. 로그인 처리 요청
+	요청내용 : /join/LoginProc.mmy
+	파라미터 : id, pw
+	컨트롤러 : com.yummymap.www.controller.join.LoginProc
+	뷰		 : /main_1.jsp
+--------------------------------------------------------
+3. 회원가입 뷰 요청
+	요청내용 : /join/join.mmy
+	파라미터 : id, pw
+	컨트롤러 : com.yummymap.www.controller.join.Join
+	뷰		 : /member/Register.jsp
+--------------------------------------------------------
+4. 회원가입 처리 요청
+	요청내용 : /join/joinProc.mmy
+	파라미터 : id, pw, tel(teltop, telmid, telend), mail(email1, email2)
+	컨트롤러 : com.yummymap.www.controller.join.JoinProc
+	뷰		 : /main_1.jsp
+--------------------------------------------------------
+5. 로그아웃 처리 요청
+	요청내용 : /join/logoutProc.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.join.LogoutProc
+	뷰		 : /main_1.jsp
+--------------------------------------------------------
+6. 아이디체크 비동기 처리 요청
+	요청내용 : /join/idCheck.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.join.IdCheck
+	뷰		 : 비동기
+--------------------------------------------------------
+7. 이메일 인증 비동기 처리 요청
+	요청내용 : /join/mailCk.mmy
+	파라미터 : 
+	컨트롤러 : com.yummymap.www.controller.join.MailCk
+	뷰		 : 비동기
+--------------------------------------------------------
+8. 아이디 찾기 비동기 처리 요청
+	요청내용 : /join/idSearch.mmy
+	파라미터 : name , mail
+	컨트롤러 : com.yummymap.www.controller.join.IdSearch
+	뷰		 : 비동기
+--------------------------------------------------------
+9. 비밀번호 찾기 비동기 처리 요청
+	요청내용 : /join/passSearch.mmy
+	파라미터 : id , mail
+	컨트롤러 : com.yummymap.www.controller.join.PassSearch
+	뷰		 : 비동기
+--------------------------------------------------------
+10. 회원정보 페이지 요청
+   요청내용 :   /member/member.mmy
+   파라미터 : mid
+   컨트롤러 :   com.yummymap.www.controller.SelectMbr
+   뷰          : member/member.jsp
+--------------------------------------------------------
+11. 회원탈퇴  요청
+   요청내용 :   /member/DropUser.mmy
+   파라미터 : mid
+   컨트롤러 :   com.yummymap.www.controller.member.DropUser
+   뷰          : 무
+--------------------------------------------------------
+12.	비밀번호변경  요청
+   요청내용 :   /member/passProc.mmy
+   파라미터 : mid
+   컨트롤러 :   com.yummymap.www.controller.member.UpdateUserProc
+   뷰          : 무
+--------------------------------------------------------
+13.	내가쓴글 보기
+   요청내용 :   /member/txtList.mmy
+   파라미터 : mid
+   컨트롤러 :   com.yummymap.www.controller.member.TxtList
+   뷰          : /member/text.jsp
+---------------------------------------------------------------------
